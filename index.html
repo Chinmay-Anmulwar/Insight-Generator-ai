@@ -7,6 +7,21 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
+        <!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <span class="close-btn" onclick="toggleSidebar()">✖</span>
+  </div>
+  <ul class="sidebar-menu">
+    <li>📄 Templates</li>
+    <li>🕘 History</li>
+    <li>⚙️ Settings</li>
+  </ul>
+</div>
+
+<!-- Menu Toggle -->
+<div class="menu-toggle" onclick="toggleSidebar()">☰</div>
+
         <div class="container">
             <h1>Insight Generator AI</h1>
             <p class="tagline">Upload your dataset and get rich visual analytics instantly</p>
@@ -27,6 +42,15 @@
       <button class="download-btn">⬇ Download Charts</button>
     </div>
 
-        </div> 
+        </div>
+        <script>
+  function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    const toggle = document.querySelector('.menu-toggle');
+    sidebar.classList.toggle('active');
+        toggle.style.display = sidebar.classList.contains('active') ? 'none' : 'block';
+  }
+</script>
+ 
     </body>
 </html>
